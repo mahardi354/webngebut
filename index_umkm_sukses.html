@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="id" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PBF9X6DQ');</script>
+    <meta name="description" content="Stop bakar uang iklan & tagihan tahunan! WebNgebut membangun landing page HTML murni super cepat (Skor 90+) & Bebas Biaya Hosting Selamanya.">
+    <meta name="theme-color" content="#f97316">
+    <meta property="og:title" content="WebNgebut - Jualan Sekali Bayar, Bebas Hosting Selamanya!">
+    <meta property="og:description" content="Skor PageSpeed 90+, LCP < 2 detik. Tanpa database, kebal malware, aman dari overload trafik iklan.">
+    <meta property="og:image" content="https://webngebut.com/og-webngebut.jpg">
+    <title>WebNgebut | Sekali Bayar, Bebas Biaya Hosting Perpanjangan Selamanya!</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23111111'/><text x='10' y='70' font-family='system-ui, sans-serif' font-size='55' font-weight='900' fill='%23FFFFFF'>W</text><text x='55' y='70' font-family='system-ui, sans-serif' font-size='55' font-weight='900' fill='%23BA4D00'>N</text></svg>" type="image/svg+xml">
+    
+    <link rel="preload" as="image" href="hero-lp-profit-vs-boncos.webp" fetchpriority="high">
+    
+    <style>
+        /* CSS RESET & VARIABLES - SUDAH LOLOS WCAG CONTRAST RATIO */
+        :root {
+            --primary-blue: #0A192F;
+            --accent-orange: #FF6B00; 
+            --orange-dark: #BA4D00; 
+            --wa-green: #10814A; 
+            --bg-light: #F8F9FA;
+            --text-dark: #333333;
+            --text-muted: #444444; 
+            --text-light: #FFFFFF;
+            --border-color: #eaeaea;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--text-dark); line-height: 1.6; background-color: var(--bg-light); }
+        h1, h2, h3, h4 { line-height: 1.3; margin-bottom: 15px; }
+        p { margin-bottom: 15px; }
+        img { max-width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto 20px; }
+        
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .section { padding: 80px 0; }
+        .bg-dark { background-color: var(--primary-blue); color: var(--text-light); }
+        .bg-white { background-color: #FFFFFF; }
+        .bg-light { background-color: var(--bg-light); }
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        
+        .text-orange { color: var(--accent-orange); } 
+        .text-orange-dark { color: var(--orange-dark); } 
+        
+        .highlight { background: rgba(255, 107, 0, 0.1); padding: 5px 10px; border-radius: 4px; border-left: 4px solid var(--accent-orange); font-style: italic; display: inline-block; margin-bottom: 20px;}
+        
+        .btn { display: inline-block; background-color: var(--orange-dark); color: var(--text-light); padding: 15px 30px; text-decoration: none; font-weight: bold; border-radius: 5px; font-size: 1.1rem; transition: transform 0.2s, background 0.2s; text-align: center; border: none; cursor: pointer; }
+        .btn:hover { background-color: #9c4100; transform: translateY(-2px); }
+        .btn-pulse { animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(186, 77, 0, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(186, 77, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(186, 77, 0, 0); }
+        }
+
+        .floating-hero-img {
+            animation: floatAnim 4s ease-in-out infinite;
+            border-radius: 12px;
+            margin: 60px auto 0;
+            display: block;
+            max-width: 100%;
+        }
+        @keyframes floatAnim {
+            0% { transform: translateY(0px); box-shadow: 0 15px 35px rgba(255, 107, 0, 0.1); }
+            50% { transform: translateY(-20px); box-shadow: 0 35px 60px rgba(255, 107, 0, 0.5); }
+            100% { transform: translateY(0px); box-shadow: 0 15px 35px rgba(255, 107, 0, 0.1); }
+        }
+
+        .floating-wa { position: fixed; bottom: 30px; right: 30px; background-color: var(--wa-green); color: white; border-radius: 50px; padding: 15px 25px; font-weight: bold; font-size: 1.1rem; text-decoration: none; box-shadow: 0 5px 20px rgba(16, 129, 74, 0.4); z-index: 1000; transition: transform 0.3s ease; display: flex; align-items: center; gap: 10px; will-change: transform; transform: translateZ(0); contain: layout style; min-width: 200px; justify-content: center; }
+        .floating-wa:hover { transform: translateY(-5px); background-color: #0b6136; }
+        .wa-icon { width: 24px; height: 24px; fill: currentColor; }
+
+        /* Sasis Grid Berdasarkan Device */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: stretch; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; align-items: stretch; }
+        .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+
+        /* PERBAIKAN SHADOW MENONJOL UNTUK POINT 2 & 3 */
+        .card { background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 12px 24px rgba(0,0,0,0.1); border: 1px solid var(--border-color); transition: transform 0.3s ease, box-shadow 0.3s ease; height: 100%; display: flex; flex-direction: column; will-change: transform, box-shadow; contain: layout style; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+        
+        .card-dark { background: rgba(255,255,255,0.05); padding: 30px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); height: 100%;}
+        
+        .check-list { list-style: none; }
+        .check-list li { margin-bottom: 12px; padding-left: 30px; position: relative; }
+        .check-list li::before { content: '✅'; position: absolute; left: 0; }
+        .cross-list { list-style: none; }
+        .cross-list li { margin-bottom: 12px; padding-left: 30px; position: relative; }
+        .cross-list li::before { content: '❌'; position: absolute; left: 0; }
+
+        .faq-card { margin-bottom: 20px; padding: 25px; border-left: 4px solid var(--primary-blue); background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid var(--border-color); transition: all 0.3s ease; }
+        .faq-card summary { font-size: 1.15rem; font-weight: bold; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; color: var(--text-dark); }
+        .faq-card summary::-webkit-details-marker { display: none; }
+        .faq-card summary::after { content: '+'; font-size: 1.8rem; color: var(--orange-dark); transition: transform 0.3s ease; line-height: 1; margin-left: 15px; }
+        .faq-card[open] summary::after { transform: rotate(45deg); color: var(--primary-blue); }
+        .faq-card p { margin-top: 15px; margin-bottom: 0; color: var(--text-muted); line-height: 1.6; }
+
+        /* PERBAIKAN SHADOW MENONJOL UNTUK POINT 1 */
+        .comparison-card { border-radius: 20px; padding: 40px; transition: all 0.3s ease; }
+        .card-standard { background: #fdfdfd; border: 2px solid #ffd8be !important; box-shadow: 0 8px 16px rgba(0,0,0,0.05); border-radius: 16px; transition: all 0.3s ease; }
+        .card-ngebut { background: #fffaf5; border: 3px solid var(--orange-dark); box-shadow: 0 20px 50px rgba(186, 77, 0, 0.2); position: relative; }
+        .badge-premium { position: absolute; top: 0; right: 0; background: var(--orange-dark); color: white; font-size: 0.7rem; font-weight: bold; padding: 5px 15px; border-bottom-left-radius: 15px; text-transform: uppercase; }
+
+        .live-audit-bar { margin: 40px auto 0; padding: 30px; background: rgba(255,255,255,0.05); border: 2px dashed rgba(255,255,255,0.3); border-radius: 12px; text-align: center; max-width: 800px; }
+        .btn-audit { display: inline-flex; align-items: center; background: var(--accent-orange); color: #000000 !important; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 0.95rem; transition: transform 0.2s; }
+        .btn-audit:hover { transform: scale(1.03); background: #ff8533; }
+        
+        /* CSS SHOWCASE WEBNGEBUT V.10 - ANTI SEMPRIT */
+        .sasis-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px; }
+        .sasis-card { background: #ffffff; border-radius: 16px; border: 1px solid #d1d5db; overflow: hidden; transition: all 0.3s ease; display: flex; flex-direction: column; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); will-change: transform, box-shadow; contain: layout style; }
+        .sasis-card:hover { transform: translateY(-8px); box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12); border-color: var(--accent-orange); }
+        .sasis-frame { width: 100%; height: 260px; overflow: hidden; background: #f8f9fa; }
+        .sasis-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.5s ease; }
+        .sasis-content { padding: 25px; text-align: left; }
+        .sasis-desc { font-size: 0.9rem; color: #595959 !important; line-height: 1.6; margin-bottom: 15px; }
+        .speed-badge { background: #f0fff4; color: #166534; padding: 6px 12px; border-radius: 6px; font-size: 0.75rem; font-weight: 800; display: inline-flex; align-items: center; gap: 6px; border: 1px solid #c6f6d5; margin-bottom: 15px; }
+        .spec-list { list-style: none; padding: 15px 0 20px 0; border-top: 1px solid #f0f0f0; margin-top: 15px; }
+        .spec-list li { font-size: 0.85rem; margin-bottom: 10px; display: flex; justify-content: space-between; color: #333333; }
+        .spec-val-green { font-weight: 800; color: #15803d !important; }
+
+        /* CSS HARGA CORET WEBNGEBUT - LIGHTHOUSE APPROVED */
+        .price-old { display: block; text-decoration: line-through; color: #707070 !important; font-size: 1.1rem; font-weight: 500; margin-bottom: -5px; }
+        .card-featured { border: 3px solid #BA4D00 !important; position: relative; box-shadow: 0 20px 40px rgba(186, 77, 0, 0.15) !important; transform: scale(1.03); z-index: 2; border-radius: 16px; }
+        .pricing-badge { position: absolute; top: -18px; left: 50%; transform: translateX(-50%); background: #BA4D00; color: #ffffff !important; padding: 6px 20px; border-radius: 50px; font-size: 0.85rem; font-weight: 900; letter-spacing: 1px; box-shadow: 0 4px 10px rgba(186, 77, 0, 0.3); white-space: nowrap; }
+
+        /* FORM CUSTOM TUNING - WEBNGEBUT */
+        #formulir-order { scroll-margin-top: 80px; }
+        .form-wrapper { background: #ffffff; padding: 40px; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: 0 20px 40px rgba(0,0,0,0.05); margin-top: 30px; }
+        .form-group { margin-bottom: 25px; text-align: left; }
+        .form-group label { display: block; font-weight: 700; margin-bottom: 10px; color: var(--primary-blue); font-size: 0.95rem; }
+        .form-control { width: 100%; padding: 12px 15px; border: 2px solid #edf2f7; border-radius: 8px; font-size: 1rem; transition: all 0.3s ease; background: #fdfdfd; }
+        .form-control:focus { outline: none; border-color: var(--accent-orange); background: #ffffff; box-shadow: 0 0 0 4px rgba(255, 107, 0, 0.1); }
+        .radio-group { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 10px; }
+        .radio-item { display: flex; align-items: center; gap: 8px; cursor: pointer; background: #f8f9fa; padding: 10px 15px; border-radius: 8px; border: 1px solid #eee; font-size: 0.9rem; }
+        .radio-item input { accent-color: var(--accent-orange); }
+        .btn-form { width: 100%; max-width: 500px; margin: 0 auto; background-color: var(--wa-green) !important; color: white !important; border-radius: 50px !important; }
+
+        #auditResult { contain: layout style; content-visibility: auto; }
+
+        /* RESPONSIVE MEDIA QUERIES */
+        @media (max-width: 1024px) {
+            .sasis-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .grid-2, .grid-3, .sasis-grid { grid-template-columns: 1fr; }
+            .grid-4 { grid-template-columns: 1fr 1fr; }
+            .section { padding: 50px 0; }
+            h1 { font-size: 2rem !important; }
+            h2 { font-size: 1.8rem !important; }
+            .floating-wa { bottom: 20px; right: 20px; padding: 12px 20px; font-size: 1rem; }
+            .card-featured { transform: scale(1); margin-top: 40px; }
+            .form-wrapper { padding: 25px 20px; }
+        }
+		
+		/* CSS KHUSUS LIVE AUDIT - JARAK SASIS SUDAH AMAN & LONGGAR */
+.section-audit { 
+    padding: 100px 0 80px 0; /* Kita tambah padding atas jadi 100px biar ada ruang napas */
+    background-color: #F8F9FA; 
+}
+		
+    </style>
+</head>
+
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PBF9X6DQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<main>
+
+        <section class="section bg-dark text-center" id="hero">
+            <div class="container">
+                
+                <div style="text-align: center; margin: 0 auto 50px; user-select: none;">
+                    <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 3.5rem; font-weight: 900; letter-spacing: -2px; line-height: 1;">
+                        <span style="color: #FFFFFF;">Web</span><span style="color: #FF6B00; font-style: italic; text-shadow: 0 0 25px rgba(255, 107, 0, 0.7);">Ngebut</span>
+                    </div>
+                    <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #FFFFFF; font-size: 0.95rem; font-weight: 600; letter-spacing: 2px; margin-top: 8px; opacity: 0.9;">
+                        GAK NGEBUT, GAK CUAN!
+                    </div>
+                </div>
+
+                <p class="highlight" style="color: white;">📱 Penawaran Langka: Bikin Sekali, Website Jualan Aktif Terus Tanpa Biaya Tahunan.</p>
+                
+                <h1 style="font-size: 2.8rem; font-weight: 900; line-height: 1.2; letter-spacing: -0.5px;">
+    LANDING PAGE SEKALI BAYAR, <span class="text-orange">GRATIS HOSTING SELAMANYA!</span>
+</h1>
+                
+                <p style="font-size: 1.2rem; max-width: 850px; margin: 0 auto 35px; color: #E0E0E0; line-height: 1.7;">
+                    Hentikan pemborosan tagihan sewa hosting jutaan rupiah setiap tahun untuk website lama Anda yang lelet. Tim WebNgebut merakit ulang halaman jualan Anda dengan koding murni HTML yang <strong>terbuka instan di bawah 1 detik di HP</strong>. Omset iklan meroket tanpa traffic mental, toko online aktif 24 jam gratis selamanya di server Cloudflare!
+                </p>
+                
+                <a href="#formulir-order" class="btn btn-pulse" style="font-size: 1.25rem; padding: 18px 35px; border-radius: 50px;">🚀 SAYA MAU LANDING PAGE KENCANG & GRATIS HOSTING</a>
+                <p style="font-size: 0.9rem; color: #B0B0B0; margin-top: 12px;">*Layanan Khusus Pemilik Toko Online & Jasa Lokal. Audit Kecepatan Web Lama 100% Gratis.</p>
+                
+                <img src="hero-lp-profit-vs-boncos.webp" alt="Perbandingan performa iklan landing page untung vs boncos" class="floating-hero-img" width="651" height="322" fetchpriority="high">
+            </div>
+        </section>
+
+<section class="section-audit" id="audit">
+    <div class="container text-center">
+        <div class="highlight">#CekKesehatanWebsite</div>
+        <h2 style="font-size: 2.5rem; font-weight: 900;">Cek Apakah Website Anda <span class="text-orange-dark">Bocor Budget Iklan?</span></h2>
+        <p style="max-width: 750px; margin: 0 auto 30px; color: var(--text-muted); line-height: 1.6;">
+            Masukkan URL website atau landing page jualan Anda sekarang. Sistem kami akan menarik data asli secara langsung dari Google PageSpeed Insights untuk melihat seberapa besar pemborosan budget iklan harian Anda.
+        </p>
+
+        <div class="audit-box">
+            <div class="audit-input-group">
+                <input type="url" id="webUrl" class="audit-input" placeholder="Contoh: https://nama-toko-anda.com" required>
+                <button onclick="jalankanAudit()" id="btnAudit" class="btn" style="flex: 1;">AUDIT SEKARANG</button>
+            </div>
+            
+            <div id="loader" class="loader"></div>
+
+            <div id="auditResult">
+                <div id="scoreBox" class="score-circle">0</div>
+                <h3 id="resultTitle">Menganalisa...</h3>
+                <p id="resultDesc" style="color: #444444; max-width: 550px; margin: 15px auto; line-height: 1.6;"></p>
+                
+                <div id="ctaAudit" style="margin-top: 30px; display: none;">
+                    <p style="font-weight: 700; color: var(--primary-blue); font-size: 1.1rem; line-height: 1.4;">
+                        🎁 Mau ubah website lama Anda jadi terbuka instan (Skor Hijau) sekaligus <span class="text-orange-dark">GRATIS BIAYA HOSTING SELAMANYA?</span>
+                    </p>
+                    <a href="https://wa.me/6285137396984?text=Halo%20WebNgebut,%20saya%20sudah%20tes%20skor%20web%20saya%20dan%20tertarik%20promo%20Sekali%20Bayar%20Gratis%20Hosting%20Selamanya" class="btn btn-pulse" style="margin-top: 15px; padding: 15px 30px; border-radius: 50px;">
+                        🚀 KLAIM SLOT GRATIS HOSTING SELAMANYA
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+async function jalankanAudit() {
+    const urlInput = document.getElementById('webUrl').value;
+    const btnAudit = document.getElementById('btnAudit');
+    const loader = document.getElementById('loader');
+    const resultDiv = document.getElementById('auditResult');
+    const scoreBox = document.getElementById('scoreBox');
+    const resultTitle = document.getElementById('resultTitle');
+    const resultDesc = document.getElementById('resultDesc');
+    const ctaAudit = document.getElementById('ctaAudit');
+
+    // API KEY Google Anda aman terpasang, Boss
+    const API_KEY = "AIzaSyDnmPVyoqkZF1b1BilcMs-NX87x5lXqhd0"; 
+
+    if (!urlInput.startsWith('http')) {
+        alert("Gunakan format lengkap ya, Boss! Contoh: https://namatoko-anda.com");
+        return;
+    }
+
+    // Reset Tampilan Sasis
+    btnAudit.disabled = true;
+    btnAudit.innerText = "SEDANG MENGHITUNG...";
+    loader.style.display = "block";
+    resultDiv.style.display = "none";
+
+    try {
+        // Panggil Google API Mobile
+        const response = await fetch(`https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(urlInput)}&category=PERFORMANCE&strategy=mobile&key=${API_KEY}`);
+        
+        if (!response.ok) throw new Error("API Limit atau URL salah");
+
+        const data = await response.json();
+        const score = Math.round(data.lighthouseResult.categories.performance.score * 100);
+
+        // Reset class lingkaran skor
+        scoreBox.className = "score-circle"; 
+        
+        // PENGKONDISIAN BAHASA MANUSIA REVISI TOTAL
+        if (score >= 90) {
+            scoreBox.classList.add('score-green');
+            resultTitle.innerText = "LUAR BIASA: WEB ANDA SUDAH MANTAP!";
+            resultDesc.innerText = "Selamat! Website jualan Anda sudah masuk kategori kencang. Pertahankan performa ini! Tapi kalau Anda masih bayar sewa server tahunan yang mahal, Anda bisa migrasi ke WebNgebut agar Gratis Hosting Selamanya.";
+        } else if (score >= 50) {
+            scoreBox.classList.add('score-yellow');
+            resultTitle.innerText = "WASPADA: WEBSITE ANDA MULAI LEMOT!";
+            resultDesc.innerText = "Skor kuning menandakan loading HP mulai berat. Ini membuat sebagian calon pembeli mulai hilang kesabaran dan kabur. Selain membuang budget iklan, Anda juga rugi bandar bayar perpanjangan hosting tahunan untuk web yang performanya nanggung begini.";
+        } else {
+            scoreBox.classList.add('score-red');
+            resultTitle.innerText = "BAHAYA BESAR: BUDGET IKLAN ANDA BOCOR TOTAL!";
+            resultDesc.innerText = "Website jualan Anda sangat lambat saat dibuka di HP. Lebih dari 60% budget iklan harian Anda habis sia-sia karena pengunjung terlanjur kabur sebelum layar putih toko Anda terbuka! Sudah bikin boncos iklan, setiap tahun Anda masih dipaksa bayar sewa hosting mahal pula!";
+        }
+
+        scoreBox.innerText = score;
+        loader.style.display = "none";
+        resultDiv.style.display = "block";
+        ctaAudit.style.display = "block";
+        btnAudit.disabled = false;
+        btnAudit.innerText = "AUDIT ULANG WEBSITE LAIN";
+
+    } catch (error) {
+        console.error(error);
+        alert("Gagal terhubung ke server Google. Pastikan URL website aktif atau coba beberapa saat lagi ya, Boss.");
+        loader.style.display = "none";
+        btnAudit.disabled = false;
+        btnAudit.innerText = "COBA LAGI";
+    }
+}
+</script>
+
+<section class="section bg-light" id="masalah">
+    <div class="container text-center">
+        
+        <span class="highlight">Fakta Pahit Pemilik Bisnis</span>
+        <h2 class="text-orange-dark" style="font-size: 2.5rem; margin-top: 10px; font-weight: 900;">Iklan Jalan Terus, Tapi Kenapa Orderan Sepi?</h2>
+        
+        <p style="max-width: 800px; margin: 0 auto 50px; font-size: 1.1rem; line-height: 1.8; color: #333333;">
+            Data resmi Google membuktikan: <strong>53% pengunjung langsung kabur</strong> jika website jualan loading lebih dari 3 detik. Bayangkan, berapa juta budget iklan yang sudah Anda <strong>'sedekahkan'</strong> ke Meta dan Google bulan ini hanya untuk membayar orang melihat layar putih muter-muter? Sudah boncos iklan, setiap tahun Anda masih wajib bayar sewa server yang mahal!
+            <br><br>
+            <span style="color: var(--primary-blue); font-weight: bold;">Sadar atau tidak, 4 kebocoran besar ini yang bikin modal jualan Anda habis tak berbekas:</span>
+        </p>
+
+        <div class="grid-4 text-left">
+            
+            <div class="card">
+                <h3 style="font-size: 1.15rem; font-weight: 850; margin-bottom: 12px; color: var(--primary-blue);">❌ Budget Iklan Hangus Sia-Sia</h3>
+                <p style="font-size: 0.95rem; line-height: 1.6; color: #444444;">Anda sudah bayar mahal agar iklan diklik, tapi uang melayang begitu saja karena calon pembeli keburu menutup halaman sebelum gambar produk Anda sempat muncul di HP mereka.</p>
+            </div>
+
+            <div class="card">
+                <h3 style="font-size: 1.15rem; font-weight: 850; margin-bottom: 12px; color: var(--primary-blue);">❌ Biaya Iklan Jadi Lebih Mahal</h3>
+                <p style="font-size: 0.95rem; line-height: 1.6; color: #444444;">Sistem Google & Meta otomatis memberikan "denda" berupa biaya iklan yang jauh lebih mencekik kepada website yang lemot, dibandingkan dengan web saingan Anda yang terbuka instan.</p>
+            </div>
+
+            <div class="card">
+                <h3 style="font-size: 1.15rem; font-weight: 850; margin-bottom: 12px; color: var(--primary-blue);">❌ Pembeli Kehilangan Kepercayaan</h3>
+                <p style="font-size: 0.95rem; line-height: 1.6; color: #444444;">Pembeli zaman sekarang tidak suka menunggu. Ketika website toko online Anda terasa berat, mereka langsung mengurungkan niat, kabur, dan mengira toko online Anda kurang profesional.</p>
+            </div>
+
+            <div class="card" style="border: 2px dashed rgba(186, 77, 0, 0.4); background: #fffdfb;">
+                <h3 style="font-size: 1.15rem; font-weight: 850; margin-bottom: 12px; color: var(--orange-dark);">❌ Diteror Tagihan Perpanjangan</h3>
+                <p style="font-size: 0.95rem; line-height: 1.6; color: #444444;">Sudah websitenya sering lemot pas iklan lagi ramai, setiap tahun Anda masih diteror tagihan perpanjangan hosting jutaan rupiah. Telat bayar sedikit, website mati dan data jualan Anda hilang total!</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="section bg-white" id="solusi">
+    <div class="container text-center">
+        
+        <span class="highlight">Solusi Mutlak WebNgebut</span>
+        <h2 style="font-size: 2.5rem; font-weight: 900;">Bukan Sekadar Bikin Web, Kami Membangun <span class="text-orange-dark">Mesin Pencekik Biaya Iklan.</span></h2>
+        
+        <p style="font-size: 1.1rem; max-width: 900px; margin: 0 auto 50px; line-height: 1.8; color: #333333;">
+            <strong>Desain mewah tidak akan mendatangkan omset jika loading-nya lambat.</strong> Kami merakit ulang website jualan Anda menggunakan koding manual tingkat tinggi yang didesain khusus untuk menghentikan kaburnya calon pembeli. Mulai dari produk fisik toko online, skincare, herbal, hingga web penyedia jasa lokal—sistem kami memastikan setiap rupiah budget iklan Anda menghasilkan klik yang berujung orderan di WhatsApp tanpa tersangkut layar putih.
+        </p>
+        
+        <div class="grid-3 text-left">
+            
+            <div class="card" style="border-top: 4px solid var(--accent-orange); background: #fffdfb; box-shadow: 0 15px 35px rgba(255, 107, 0, 0.08);">
+                <h3 style="font-size: 1.25rem; color: var(--orange-dark); margin-bottom: 12px; font-weight: 850;">🎁 Gratis Hosting Selamanya</h3>
+                <p style="font-size: 0.95rem; margin: 0; color: #333333; line-height: 1.6;">Lupakan teror tagihan perpanjangan hosting jutaan rupiah setiap tahun. Website jualan Anda kami tanam langsung di infrastruktur server Cloudflare Global yang aktif online 24 jam <strong>gratis selamanya tanpa biaya sewa tahunan.</strong></p>
+            </div>
+
+            <div class="card" style="border-top: 4px solid var(--primary-blue);">
+                <h3 style="font-size: 1.25rem; color: var(--primary-blue); margin-bottom: 12px; font-weight: 850;">⚡ Koding Manual (Super Enteng)</h3>
+                <p style="font-size: 0.95rem; margin: 0; color: #444444; line-height: 1.6;">Kami membuang sistem WordPress/Elementor lama Anda yang berat. Web Anda dirakit ulang menggunakan baris kode HTML murni yang langsung terbuka instan tanpa loading muter-muter saat diklik pembeli.</p>
+            </div>
+
+            <div class="card" style="border-top: 4px solid var(--primary-blue);">
+                <h3 style="font-size: 1.25rem; color: var(--primary-blue); margin-bottom: 12px; font-weight: 850;">💎 Visual Mewah & Tetap Ringan</h3>
+                <p style="font-size: 0.95rem; margin: 0; color: #444444; line-height: 1.6;">Cepat bukan berarti polosan. Foto produk Anda tetap tampil mewah, tajam, dan berkelas, namun ukurannya sudah kami kompres agar memuat instan tanpa memakan kuota internet HP pembeli.</p>
+            </div>
+
+            <div class="card" style="border-top: 4px solid var(--primary-blue);">
+                <h3 style="font-size: 1.25rem; color: var(--primary-blue); margin-bottom: 12px; font-weight: 850;">🎯 Pelacak Iklan Otomatis Akurat</h3>
+                <p style="font-size: 0.95rem; margin: 0; color: #444444; line-height: 1.6;">Pemasangan kode pelacak data (Meta Pixel, Google Analytics, TikTok Pixel) disetel menggunakan metode khusus di balik layar agar pencatatan data jualan Anda tetap akurat tanpa memperlambat web.</p>
+            </div>
+
+            <div class="card" style="border-top: 4px solid var(--primary-blue);">
+                <h3 style="font-size: 1.25rem; color: var(--primary-blue); margin-bottom: 12px; font-weight: 850;">🛡️ 100% Kebal Hacker & Malware</h3>
+                <p style="font-size: 0.95rem; margin: 0; color: #444444; line-height: 1.6;">Karena tidak menggunakan database, website Anda menutup total celah peretas. Bebas dari serangan virus link judi online yang sering membuat akun iklan Anda diblokir mendadak.</p>
+            </div>
+
+            <div class="card" style="border-top: 4px solid var(--primary-blue);">
+                <h3 style="font-size: 1.25rem; color: var(--primary-blue); margin-bottom: 12px; font-weight: 850;">📱 Desain Ramah Layar HP</h3>
+                <p style="font-size: 0.95rem; margin: 0; color: #444444; line-height: 1.6;">Tata letak yang elegan, modern, dan sangat ramah jempol. Kami memastikan visual web membuat pengunjung nyaman membaca penawaran Anda lalu segera menekan tombol WhatsApp order.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="section bg-light" id="benchmark-infrastruktur">
+    <div class="container text-center">
+        <span class="highlight">Contoh Hasil Kerja</span>
+        <h2 class="text-orange-dark" style="font-size: 2.5rem; font-weight: 900;">Landing Page Mewah, Loading Tetap Super Cepat!</h2>
+        <p style="max-width: 850px; margin: 0 auto 50px; line-height: 1.7; color: #333333; font-size: 1.1rem;">
+            Bukti nyata bahwa tampilan yang estetik dan elegan bisa bersanding sempurna dengan kecepatan tinggi. 
+            Berikut adalah <strong>6 template industri siap pakai</strong> yang aktif online di server Cloudflare—<strong>Bisa Anda miliki Sekali Bayar, GRATIS Biaya Hosting Selamanya!</strong>
+        </p>
+
+        <div class="sasis-grid">
+            
+            <div class="sasis-card">
+                <a href="/serviceac/" target="_blank" class="sasis-frame">
+                    <img src="serviceac.webp" alt="Contoh Website Jasa Service AC">
+                </a>
+                <div class="sasis-content">
+                    <div class="speed-badge">⚡ SKOR GOOGLE HP: 100/100</div>
+                    <h3 style="font-weight: 800; margin-bottom: 10px; color: var(--primary-blue);">Desain Jasa Service AC / Urgent</h3>
+                    <p class="sasis-desc">Didesain khusus untuk bisnis jasa darurat. Begitu iklan diklik, halaman langsung terbuka instan agar tombol telepon bisa langsung ditekan pelanggan.</p>
+                    <ul class="spec-list">
+                        <li><span>Kecepatan Buka</span> <span style="font-weight: bold; color: #111;">0.8 Detik</span></li>
+                        <li><span>Biaya Server</span> <span class="spec-val-green">Gratis Selamanya 🎁</span></li>
+                    </ul>
+                    <a href="/serviceac/" target="_blank" class="btn" style="width: 100%; font-size: 0.85rem;">LIHAT CONTOH LIVE</a>
+                </div>
+            </div>
+
+            <div class="sasis-card">
+                <a href="/rentalmobil/" target="_blank" class="sasis-frame">
+                    <img src="rentalmobil.webp" alt="Contoh Website Rental Mobil">
+                </a>
+                <div class="sasis-content">
+                    <div class="speed-badge">⚡ SKOR GOOGLE HP: 98/100</div>
+                    <h3 style="font-weight: 800; margin-bottom: 10px; color: var(--primary-blue);">Desain Katalog / Rental Mobil</h3>
+                    <p class="sasis-desc">Menampilkan banyak foto armada unit mobil dengan mewah, namun tetap terasa super ringan dibuka meskipun sinyal HP pelanggan sedang minim.</p>
+                    <ul class="spec-list">
+                        <li><span>Optimasi Gambar</span> <span style="font-weight: bold; color: #111;">Format WebP Ringan</span></li>
+                        <li><span>Biaya Server</span> <span class="spec-val-green">Gratis Selamanya 🎁</span></li>
+                    </ul>
+                    <a href="/rentalmobil/" target="_blank" class="btn" style="width: 100%; font-size: 0.85rem;">LIHAT CONTOH LIVE</a>
+                </div>
+            </div>
+
+            <div class="sasis-card">
+                <a href="/property/" target="_blank" class="sasis-frame">
+                    <img src="property.webp" alt="Contoh Website Properti">
+                </a>
+                <div class="sasis-content">
+                    <div class="speed-badge">⚡ SKOR GOOGLE HP: 100/100</div>
+                    <h3 style="font-weight: 800; margin-bottom: 10px; color: var(--primary-blue);">Desain Properti & Developer</h3>
+                    <p class="sasis-desc">Visual perumahan mewah dengan resolusi tajam yang terbuka tanpa nunggu. Menjaga kualitas skor iklan Google Ads Anda tetap tinggi.</p>
+                    <ul class="spec-list">
+                        <li><span>Kualitas Foto</span> <span style="font-weight: bold; color: #111;">Sangat Tajam & Jernih</span></li>
+                        <li><span>Biaya Server</span> <span class="spec-val-green">Gratis Selamanya 🎁</span></li>
+                    </ul>
+                    <a href="/property/" target="_blank" class="btn" style="width: 100%; font-size: 0.85rem;">LIHAT CONTOH LIVE</a>
+                </div>
+            </div>
+
+            <div class="sasis-card">
+                <a href="/wo/" target="_blank" class="sasis-frame">
+                    <img src="wo.webp" alt="Contoh Website Wedding Organizer">
+                </a>
+                <div class="sasis-content">
+                    <div class="speed-badge">⚡ SKOR GOOGLE HP: 97/100</div>
+                    <h3 style="font-weight: 800; margin-bottom: 10px; color: var(--primary-blue);">Desain Wedding / Jasa WO</h3>
+                    <p class="sasis-desc">Tampil anggun dan tetap kokoh stabil saat dihantam ribuan trafik dari iklan Instagram/TikTok. Galeri foto dekorasi terbuka tanpa loading lama.</p>
+                    <ul class="spec-list">
+                        <li><span>Beban Trafik</span> <span style="font-weight: bold; color: #111;">Anti Server Down</span></li>
+                        <li><span>Biaya Server</span> <span class="spec-val-green">Gratis Selamanya 🎁</span></li>
+                    </ul>
+                    <a href="/wo/" target="_blank" class="btn" style="width: 100%; font-size: 0.85rem;">LIHAT CONTOH LIVE</a>
+                </div>
+            </div>
+
+            <div class="sasis-card">
+                <a href="/aqiqah/" target="_blank" class="sasis-frame">
+                    <img src="aqiqah.webp" alt="Contoh Website Paket Aqiqah">
+                </a>
+                <div class="sasis-content">
+                    <div class="speed-badge">⚡ SKOR GOOGLE HP: 99/100</div>
+                    <h3 style="font-weight: 800; margin-bottom: 10px; color: var(--primary-blue);">Desain Paket Aqiqah / Catering</h3>
+                    <p class="sasis-desc">Membangun kepercayaan instan. Daftar tabel harga paket dan menu makanan tertata jelas, rapi, serta sangat hemat kuota internet pembeli.</p>
+                    <ul class="spec-list">
+                        <li><span>Beban Halaman</span> <span style="font-weight: bold; color: #111;">Sangat Ringan</span></li>
+                        <li><span>Biaya Server</span> <span class="spec-val-green">Gratis Selamanya 🎁</span></li>
+                    </ul>
+                    <a href="/aqiqah/" target="_blank" class="btn" style="width: 100%; font-size: 0.85rem;">LIHAT CONTOH LIVE</a>
+                </div>
+            </div>
+
+            <div class="sasis-card">
+                <a href="/ecourse/" target="_blank" class="sasis-frame">
+                    <img src="ecourse.webp" alt="Contoh Website E-Course">
+                </a>
+                <div class="sasis-content">
+                    <div class="speed-badge">⚡ SKOR GOOGLE HP: 98/100</div>
+                    <h3 style="font-weight: 800; margin-bottom: 10px; color: var(--primary-blue);">Desain Halaman Penawaran Panjang</h3>
+                    <p class="sasis-desc">Solusi untuk halaman penawaran yang berisi teks sangat panjang. Layar bisa di-scroll dengan mulus tanpa ada elemen gambar yang lompat-lompat.</p>
+                    <ul class="spec-list">
+                        <li><span>Stabilitas Scroll</span> <span style="font-weight: bold; color: #111;">Mulus Tanpa Lompat</span></li>
+                        <li><span>Biaya Server</span> <span class="spec-val-green">Gratis Selamanya 🎁</span></li>
+                    </ul>
+                    <a href="/ecourse/" target="_blank" class="btn" style="width: 100%; font-size: 0.85rem;">LIHAT CONTOH LIVE</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="section bg-dark text-center" id="metrik">
+    <div class="container">
+        <h2 style="font-size: 2.5rem; font-weight: 900;">Standar Kecepatan Tinggi yang <span class="text-orange">Disukai Google & Meta</span></h2>
+        <p style="color: #E0E0E0; margin-bottom: 50px; font-size: 1.1rem; line-height: 1.6;">Menyelamatkan puluhan juta budget iklan harian sekaligus memangkas biaya hosting tahunan pemilik bisnis online di Indonesia.</p>
+        
+        <div class="grid-4 text-center">
+            <div class="card-dark">
+                <h3 class="text-orange" style="font-size: 3rem; margin-bottom: 5px; font-weight: 900;">99<span style="font-size: 1.2rem; color: #fff;">/100</span></h3>
+                <p style="font-size: 1rem; font-weight: bold; color: #FFFFFF;">Skor Kecepatan HP</p>
+            </div>
+            <div class="card-dark">
+                <h3 class="text-orange" style="font-size: 3rem; margin-bottom: 5px; font-weight: 900;">0.8s</h3>
+                <p style="font-size: 1rem; font-weight: bold; color: #FFFFFF;">Web Terbuka Instan</p>
+            </div>
+            <div class="card-dark">
+                <h3 class="text-orange" style="font-size: 3rem; margin-bottom: 5px; font-weight: 900;">0<span style="font-size: 1.2rem; color: #fff;">%</span></h3>
+                <p style="font-size: 1rem; font-weight: bold; color: #FFFFFF;">Macet / Nge-lag</p>
+            </div>
+            <div class="card-dark" style="border: 1px dashed var(--accent-orange); background: rgba(255, 107, 0, 0.05);">
+                <h3 class="text-orange" style="font-size: 3rem; margin-bottom: 5px; font-weight: 900;">100<span style="font-size: 1.2rem; color: #fff;">%</span></h3>
+                <p style="font-size: 1rem; font-weight: bold; color: #FFFFFF;">Hosting Gratis Selamanya</p>
+            </div>
+        </div>
+        
+        <img src="bukti-skor-pagespeed-insights-99.webp" alt="Bukti hasil audit Google PageSpeed Insights WebNgebut skor hijau" width="1200" height="600" style="margin-top: 50px; width: 100%; height: auto;" loading="lazy" decoding="async">
+        
+        <p class="text-sm mt-3 italic text-center" style="color: #B0B0B0; font-size: 0.9rem; line-height: 1.6; max-width: 900px; margin: 20px auto 0;">
+            *Catatan Transparansi: Skor 99 adalah hasil nyata untuk website jualan siap tempur. Meskipun nanti landing page Anda dipasang banyak kode pelacak iklan (seperti Facebook Pixel atau TikTok Pixel), kami menggaransi performa website Anda akan tetap aman terkunci di Zona Hijau (Skor 90-100) <strong>sekaligus tetap menikmati fasilitas server gratis selamanya tanpa biaya sewa tahunan.</strong>
+        </p>
+
+        <div class="live-audit-bar">
+            <p style="font-weight: bold; margin-bottom: 10px; color: var(--accent-orange);">📊 BUKTIKAN SENDIRI SECARA LANGSUNG:</p>
+            <p style="font-size: 0.95rem; color: #E0E0E0; margin-bottom: 20px; line-height: 1.6;">Jangan mudah percaya dengan gambar tangkapan layar (screenshot). Klik tombol di bawah ini untuk menguji dan mengaudit langsung kecepatan website yang sedang Anda buka ini (WebNgebut.com) menggunakan alat uji resmi dari Google.</p>
+            <a href="https://pagespeed.web.dev/analysis?url=https://webngebut.com" target="_blank" rel="noopener" class="btn-audit">
+                🚀 LIHAT BUKTI SKOR LIVE DI GOOGLE
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="section bg-light" id="perbandingan">
+    <div class="container text-center">
+        <h2 style="font-size: 2.5rem; margin-bottom: 50px; font-weight: 900;">
+            WEB PASARAN <span style="color: #707070;">VS</span> <span class="text-orange-dark" style="font-style: italic;">WEBNGEBUT</span>
+        </h2>
+        
+        <div class="grid-2">
+            <div class="comparison-card card-standard text-left" style="border-radius: 16px;">
+                <p style="font-weight: bold; color: #444444; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 2px;">Web Pasaran (WordPress/Elementor)</p>
+                <ul class="cross-list" style="color: #444444; line-height: 1.8;">
+                    <li>Loading lambat 5-10 detik (Pembeli kabur duluan)</li>
+                    <li>Sistem bengkak & tumpukan database sampah</li>
+                    <li>Sering lemot, macet, & berantakan saat dibuka di HP</li>
+                    <li>Skor kecepatan Google berwarna Merah / Kuning</li>
+                    <li><span style="color: #dc2626; font-weight: 700;">Wajib bayar sewa hosting jutaan rupiah tiap tahun (Telat bayar, web mati!)</span></li>
+                    <li>Rentan jebol terserang virus & malware judi online</li>
+                </ul>
+            </div>
+
+            <div class="comparison-card card-ngebut text-left" style="border-radius: 16px; border: 2px solid var(--orange-dark); box-shadow: 0 15px 35px rgba(255, 107, 0, 0.08);">
+                <div class="badge-premium">Skor Hijau Rata Kanan</div>
+                <p style="font-weight: bold; color: var(--orange-dark); margin-bottom: 25px; text-transform: uppercase; letter-spacing: 2px;">WebNgebut 🚀</p>
+                <ul class="check-list" style="color: var(--text-dark); font-weight: 600; line-height: 1.8;">
+                    <li>Terbuka Instan di HP (Di bawah 1 detik)</li>
+                    <li>Koding Murni Super Ringan (Bebas sistem berat)</li>
+                    <li class="text-orange-dark">Visual Tetap Mewah, Modern & Estetik</li>
+                    <li>Skor Kecepatan Google 100% Zona Hijau</li>
+                    <li><strong style="color: #15803d; font-size: 1.05rem;">GRATIS HOSTING SELAMANYA 🎁 (Tanpa Biaya Tahunan)</strong></li>
+                    <li>100% Aman & Kebal dari Serangan Hacker/Virus</li>
+                </ul>
+            </div>
+        </div>
+        
+        <p style="margin-top: 30px; font-size: 0.9rem; color: #333333; font-style: italic; line-height: 1.6; max-width: 800px; margin-left: auto; margin-right: auto;">
+            *Catatan: Kami menanamkan website Anda langsung di infrastruktur server Cloudflare Global. Keamanan tingkat tinggi & kecepatan maksimal bisa Anda nikmati selamanya tanpa perlu pusing memikirkan tagihan sewa hosting lagi.
+        </p>
+    </div>
+</section>
+
+<section class="section bg-light text-center" id="testimoni">
+    <div class="container">
+        <h2 style="font-size: 2.5rem; font-weight: 900;">KATA MEREKA YANG BERHENTI <span class="text-orange-dark">BAKAR UANG IKLAN</span></h2>
+        <p style="font-size: 1.1rem; max-width: 850px; margin: 0 auto 50px; color: #333333; line-height: 1.6;">
+            Bukti nyata bagaimana sistem koding ringan WebNgebut menyelamatkan omset penjualan sekaligus menghentikan selamanya pemborosan biaya tagihan sewa hosting tahunan.
+        </p>
+        
+        <div class="grid-3">
+            
+            <div class="card text-left" style="border-radius: 12px; display: flex; flex-direction: column; justify-content: space-between;">
+                <p style="font-size: 1.05rem; font-style: italic; flex-grow: 1; color: #333333; line-height: 1.6;">
+                    "Gila, omset jualan skincare saya langsung naik drastis sejak diganti ke HTML murni! Dulu biaya klik iklan habis banyak tapi yang masuk ke WA sepi banget karena web lama lemot. Sekarang pas iklan diklik dari HP langsung terbuka tanpa loading, pembeli gak kabur lagi!"
+                </p>
+                <div style="display: flex; align-items: center; margin-top: 20px; border-top: 1px solid var(--border-color); padding-top: 15px;">
+                    <img src="foto-andi.webp" alt="Foto Testimoni Andi S." style="width: 60px; height: 60px; object-fit: cover; border-radius: 50%; margin: 0 15px 0 0;" loading="lazy" decoding="async">
+                    <div>
+                        <strong style="display: block; line-height: 1.2; color: var(--primary-blue);">Andi S.</strong>
+                        <span style="font-size: 0.9rem; color: #555555; display: block; margin-top: 4px;">Pemilik Brand Skincare Lokal</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card text-left" style="border-radius: 12px; display: flex; flex-direction: column; justify-content: space-between; border: 1px dashed var(--accent-orange); background: #fffdfb;">
+                <p style="font-size: 1.05rem; font-style: italic; flex-grow: 1; color: #333333; line-height: 1.6;">
+                    "Dulu pusing pakai hosting biasa, website sering down mendadak pas trafik iklan lagi ramai-ramainya di akhir bulan. Mana tiap tahun ditagih biaya sewa server jutaan rupiah. Semenjak pakai WebNgebut, website stabil kencang dan <strong>Gratis Hosting Selamanya!</strong> Hemat operasional banget!"
+                </p>
+                <div style="display: flex; align-items: center; margin-top: 20px; border-top: 1px solid var(--border-color); padding-top: 15px;">
+                    <img src="foto-budi.webp" alt="Foto Testimoni Budi W." style="width: 60px; height: 60px; object-fit: cover; border-radius: 50%; margin: 0 15px 0 0;" loading="lazy" decoding="async">
+                    <div>
+                        <strong style="display: block; line-height: 1.2; color: var(--orange-dark);">Budi W.</strong>
+                        <span style="font-size: 0.9rem; color: #555555; display: block; margin-top: 4px;">Produsen Herbal Online</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card text-left" style="border-radius: 12px; display: flex; flex-direction: column; justify-content: space-between;">
+                <p style="font-size: 1.05rem; font-style: italic; flex-grow: 1; color: #333333; line-height: 1.6;">
+                    "Saya sempat bingung lihat laporan pengeluaran iklan bulanan habis besar tapi telepon masuk sepi. Ternyata setelah dicek, webnya lemot sekali saat dibuka dari HP. Begitu dirakit ulang oleh tim WebNgebut, loading jadi instan. Setiap hari ada saja orderan masuk untuk sewa alat berat!"
+                </p>
+                <div style="display: flex; align-items: center; margin-top: 20px; border-top: 1px solid var(--border-color); padding-top: 15px;">
+                    <img src="foto-haryanto.webp" alt="Foto Testimoni Haryanto D." style="width: 60px; height: 60px; object-fit: cover; border-radius: 50%; margin: 0 15px 0 0;" loading="lazy" decoding="async">
+                    <div>
+                        <strong style="display: block; line-height: 1.2; color: var(--primary-blue);">Haryanto D.</strong>
+                        <span style="font-size: 0.9rem; color: #555555; display: block; margin-top: 4px;">Direktur PT Penyewaan Alat Berat</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="section bg-white" id="filter">
+    <div class="container">
+        <h2 class="text-center" style="font-size: 2.5rem; font-weight: 900; margin-bottom: 50px;">Apakah Layanan Ini <span class="text-orange-dark">Cocok Untuk Bisnis Anda?</span></h2>
+        
+        <div class="grid-2">
+            
+            <div class="card" style="border-top: 5px solid #15803d; border-radius: 12px; box-shadow: 0 10px 30px rgba(21, 128, 61, 0.05); background: #fbfdfb;">
+                <h3 style="margin-bottom: 20px; color: #15803d; font-weight: 850;">SANGAT COCOK UNTUK (Pasti Untung & Hemat):</h3>
+                <ul class="check-list" style="font-size: 1.1rem; color: #333333; line-height: 1.7;">
+                    <li><strong>Pengiklan Meta / Google / TikTok Ads:</strong> Anda yang butuh website super cepat di bawah 1 detik agar calon pembeli tidak kabur saat mengklik iklan harian Anda.</li>
+                    <li><strong>Website Perusahaan & UMKM Mapan:</strong> Anda yang ingin menampilkan profil bisnis mewah, elegan, profesional, aman dari hacker, serta <strong>GRATIS biaya sewa server tahunan selamanya.</strong></li>
+                    <li><strong>Bisnis Jasa & Jasa Lokal:</strong> Pemilik usaha kontraktor, sedot WC, sewa mobil, dekorasi, atau katering aqiqah yang butuh telepon dan chat WhatsApp mengalir masuk setiap hari.</li>
+                    <li><strong>Halaman Pendek Fokus Jualan:</strong> Produsen produk fisik, skincare, atau herbal yang ingin fokus menampilkan satu produk unggulan agar pengunjung langsung order tanpa bertele-tele.</li>
+                </ul>
+            </div>
+            
+            <div class="card" style="border-top: 5px solid #dc3545; border-radius: 12px; box-shadow: 0 10px 30px rgba(220, 53, 69, 0.05);">
+                <h3 style="margin-bottom: 20px; color: #dc3545; font-weight: 850;">TIDAK COCOK UNTUK:</h3>
+                <ul class="cross-list" style="font-size: 1.1rem; color: #333333; line-height: 1.7;">
+                    <li><strong>Toko Online dengan Sistem Keranjang:</strong> Website kompleks berskala besar yang membutuhkan sistem kelola akun pembeli, keranjang belanja otomatis, dan hitung ongkir otomatis di dalam web.</li>
+                    <li><strong>Portal Berita / Blog Berita Harian:</strong> Website media yang mengharuskan tim admin mengunggah dan mengetik puluhan artikel berita baru setiap beberapa jam sekali.</li>
+                    <li><strong>Sistem Pendaftaran Anggota (Membership):</strong> Website yang membutuhkan fitur pendaftaran member, login akun rahasia, dan pengelolaan data pengguna di dalam server internal.</li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<section class="section bg-white text-center" id="harga">
+    <div class="container">
+        <div class="highlight">#SolusiHematJangkaPanjang</div>
+        <h2 style="font-size: 2.8rem; font-weight: 900;">PILIH PAKET <span class="text-orange-dark">AKSELERASI BISNIS ANDA</span></h2>
+        <p style="font-size: 1.15rem; margin-bottom: 60px; color: #333333; max-width: 750px; margin: 0 auto 60px; line-height: 1.6;">
+            Hentikan kebocoran budget iklan harian Anda hari ini. Pilih paket investasi terbaik yang dirancang khusus untuk mengunci omset dan memangkas biaya operasional bisnis Anda.
+        </p>
+        
+        <div class="grid-2" style="max-width: 1000px; margin: 0 auto; align-items: stretch;">
+            
+            <div class="card card-standard" style="padding: 45px 35px; background-color: #fff; display: flex; flex-direction: column; border-radius: 16px; border: 1px solid #E0E0E0;">
+                <h3 style="font-size: 1.1rem; color: #707070; margin-bottom: 10px; letter-spacing: 2px; font-weight: 800;">PAKET PENYELAMAT</h3>
+                
+                <span class="price-old">Rp 2.500.000</span>
+                <h2 class="text-orange-dark" style="font-size: 2.8rem; margin-bottom: 30px; font-weight: 900;">Rp 1.250.000</h2>
+                
+                <ul class="check-list text-left" style="margin-bottom: 40px; font-size: 0.95rem; flex-grow: 1; color: #333333; line-height: 1.7;">
+                    <li><strong style="color: #15803d;">GARANSI MUTLAK:</strong> Skor Kecepatan Google HP 90-100 (Hijau). Tidak Hijau, Uang Kembali Pak!</li>
+                    <li style="color: #15803d; font-weight: 700;">🎁 GRATIS HOSTING SELAMANYA: Tanpa ada biaya sewa server tahunan lagi.</li>
+                    <li><strong>1 Halaman Landing Page:</strong> Desain mewah, fokus tinggi ke konversi penjualan WhatsApp.</li>
+                    <li><strong>Koding Murni HTML/CSS Bersih:</strong> Super ringan dibuka di HP pembeli tanpa sistem database bengkak.</li>
+                    <li><strong>Siap Tayang Cepat:</strong> Pengerjaan maksimal 2 hari kerja (Kecepatan adalah omset).</li>
+                    <li><strong>Sistem Terima Beres:</strong> Website kami bantu setup langsung ke server Cloudflare Global.</li>
+                    <li><strong>Siap Pasang Pelacak Iklan:</strong> Sudah termasuk pemasangan kode Pixel Meta, Google, & TikTok.</li>
+                    <li><strong>Gratis Jasa Edit Konten:</strong> Bebas biaya ganti teks, harga, atau foto selama 3 bulan pertama.</li>
+                    <li><span style="color: #dc2626; font-weight: 700;">* Belum Termasuk Domain:</span> Bisa menggunakan nama domain (.com/.id) lama Anda yang sudah ada saat ini.</li>
+                </ul>
+                <a href="#formulir-order" class="btn" style="width: 100%; background-color: var(--primary-blue); color: #ffffff; border-radius: 50px; font-weight: 700; padding: 14px 0;">AMANKAN SLOT INI</a>
+            </div>
+
+            <div class="card card-featured" style="padding: 45px 35px; background-color: #fff; display: flex; flex-direction: column; border-radius: 16px; border: 2px solid var(--orange-dark); box-shadow: 0 15px 35px rgba(255, 107, 0, 0.08);">
+                <div class="pricing-badge">🔥 TERLARIS / TERIMA BERES TINGGAL JUALAN</div>
+                <h3 style="font-size: 1.1rem; color: #707070; margin-bottom: 10px; letter-spacing: 2px; font-weight: 800;">PAKET SCALING</h3>
+                
+                <span class="price-old">Rp 3.950.000</span>
+                <h2 class="text-orange-dark" style="font-size: 2.8rem; margin-bottom: 30px; font-weight: 900;">Rp 1.950.000</h2>
+                
+                <ul class="check-list text-left" style="margin-bottom: 40px; font-size: 0.95rem; flex-grow: 1; color: #333333; line-height: 1.7;">
+                    <li><strong style="color: #15803d;">GARANSI MUTLAK:</strong> Skor Kecepatan Google HP dijamin Hijau di setiap halaman web.</li>
+                    <li style="color: #15803d; font-weight: 700;">🎁 GRATIS HOSTING SELAMANYA: Tanpa ada biaya sewa server tahunan lagi.</li>
+                    <li><strong style="color: #15803d;">SUDAH TERMASUK DOMAIN:</strong> Gratis 1 Nama Website (.com / .id) resmi selama 1 tahun penuh.</li>
+                    <li><strong>Maksimal 3 Halaman Web:</strong> Sangat cocok untuk Anda yang ingin melakukan tes perbandingan iklan produk.</li>
+                    <li><strong>Sistem Terima Beres:</strong> Website kami bantu setup langsung ke server Cloudflare Global.</li>
+                    <li><strong>Siap Pasang Pelacak Iklan:</strong> Sudah termasuk pemasangan kode Pixel Meta, Google, & TikTok.</li>
+                    <li><strong>Antrean Pengerjaan Prioritas:</strong> Proyek Anda langsung dikerjakan duluan tanpa antre reguler.</li>
+                    <li><strong>VIP Jasa Edit Konten:</strong> Bebas biaya ganti teks, harga, atau foto selama 6 bulan penuh.</li>
+                    <li><strong>Integrasi Maps & Medsos:</strong> Terhubung lengkap ke Google Maps toko dan akun sosial media bisnis Anda.</li>
+                </ul>
+                <a href="#formulir-order" class="btn btn-pulse" style="width: 100%; border-radius: 50px; font-weight: 700; padding: 14px 0;">GAS POL SEKARANG</a>
+            </div>
+        </div>
+
+        <div style="margin: 60px auto 0; max-width: 1000px; background-color: #f0fdf4; border: 2px dashed #15803d; padding: 30px; border-radius: 16px; color: #166534; text-align: left;">
+            <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+                <span style="font-size: 3rem; display: block; margin: 0 auto;">🎁</span>
+                <div style="flex: 1; min-width: 250px;">
+                    <h3 style="margin: 0; font-size: 1.25rem; color: #15803d; font-weight: 800; line-height: 1.2;">
+                        BONUS MAUT SEMUA PAKET:
+                    </h3>
+                    <p style="margin: 8px 0 0; font-size: 1.05rem; line-height: 1.6; color: #222222;">
+                        <strong>Gratis Biaya Sewa Hosting & SSL Selamanya!</strong> Tindakan ini otomatis mengamankan uang operasional Anda sebesar Rp 500.000 hingga Rp 1.500.000 setiap tahun. Cukup bayar sekali di awal untuk investasi koding pembuatannya, halaman landing page jualan Anda aktif online terus selamanya tanpa ada tagihan tahunan server lagi!
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <p class="terms-text" style="margin-top: 25px; font-size: 0.85rem; color: #707070; line-height: 1.4;">*Syarat dan ketentuan berlaku gratis selamanya selama menggunakan infrastruktur jaringan server Cloudflare Global Network.</p>
+    </div>
+</section>
+
+<section class="section bg-white">
+    <div class="container text-center">
+        
+        <div class="live-audit-bar" style="border: 2px dashed var(--orange-dark); background: #fffaf5; border-radius: 16px; padding: 45px 30px; box-shadow: 0 15px 35px rgba(255, 107, 0, 0.04);">
+            <h3 class="text-orange-dark" style="font-size: 1.8rem; font-weight: 900; margin-bottom: 15px;">Jangan Salah Pilih Jalan Untuk Website Bisnis Anda...</h3>
+            
+            <p style="font-size: 1.1rem; max-width: 900px; margin: 0 auto 20px; color: #222222; line-height: 1.7;">
+                Banyak orang bisa membuat website jualan yang tampilannya cantik, tapi **sangat lelet** saat dibuka calon pembeli lewat HP. Di sisi lain, ada juga web yang cepat tapi tampilannya polosan dan terlihat amatir. Di <strong>WebNgebut</strong>, kami menggabungkan dua kekuatan utama: <strong>Tampilan Mewah Berkelas yang Berpadu dengan Kecepatan Ekstrem Instan di Bawah 1 Detik.</strong>
+            </p>
+            
+            <p style="font-size: 1.1rem; max-width: 900px; margin: 0 auto 35px; color: #222222; line-height: 1.7;">
+                Kami membuktikan bahwa Anda tidak perlu lagi mengorbankan keindahan visual demi mengejar kecepatan. Luar biasanya, seluruh performa dewa dan kemewahan ini bisa Anda miliki dengan sistem sekali bayar, <strong>GRATIS biaya sewa hosting dan SSL selamanya tanpa ada tagihan tahunan server lagi!</strong> Jangan biarkan modal iklan Anda terus menguap sia-sia karena calon pembeli kabur melihat layar putih toko online Anda yang lelet.
+            </p>
+            
+            <a href="#formulir-order" class="btn btn-pulse" style="min-width: 280px; border-radius: 50px; font-weight: 700; font-size: 1.15rem; padding: 16px 35px;">
+                🚀 AMANKAN SLOT WEB KENCANG & GRATIS HOSTING SELAMANYA
+            </a>
+        </div>
+        
+    </div>
+</section>
+
+        <section class="section bg-light" id="faq">
+    <div class="container" style="max-width: 800px;">
+        <h2 class="text-center" style="font-size: 2.5rem; font-weight: 900; margin-bottom: 20px;">Masih Ragu? <span class="text-orange-dark">Baca Ini Sebelum Anda Memesan.</span></h2>
+        <p class="text-center" style="margin-bottom: 40px; font-size: 1.1rem; color: #333333; line-height: 1.6;">Wajar jika Anda berhati-hati sebelum merombak sistem website jualan Anda. Berikut adalah jawaban jujur dan blak-blakan dari pertanyaan yang paling sering ditanyakan oleh rekan-rekan pemilik bisnis.</p>
+        
+        <div style="margin-top: 40px;">
+            
+            <details class="faq-card text-left" open>
+                <summary>Kenapa tidak pakai WordPress standar saja lalu dipasang aplikasi pembersih lelet? Kan lebih gampang?</summary>
+                <p style="color: #333333; line-height: 1.7;">
+                    Jawab: Aplikasi pembersih lelet di WordPress itu cuma menutupi "penyakit" aslinya, Pak. Sistem WordPress lama dan alat pembuat web instan bawaannya dari awal sudah menghasilkan tumpukan <strong>baris kode sampah yang sangat bengkak</strong>. Ditambah lagi, sistemnya harus selalu memanggil data dari server internal setiap kali diklik pelanggan. Efeknya? Web rawan macet total atau mendadak lemot saat iklan Anda diserbu banyak klik pembeli.<br><br>
+                    <strong>Sistem WebNgebut membuang seluruh sistem berat tersebut.</strong> Hasilnya? Landing page Anda terbuka instan dalam hitungan milidetik, 100% anti-macet walau trafik iklan membludak, aman dari virus, dan bebas tagihan sewa server tahunan yang mencekik dompet.
+                </p>
+            </details>
+
+            <details class="faq-card text-left">
+                <summary>Apakah setelah ini saya masih harus bayar biaya perpanjangan server/hosting tahunan?</summary>
+                <p style="color: #333333; line-height: 1.7;">Jawab: Sama sekali <strong>TIDAK ADA BIAYA HOSTING LAGI, 100% GRATIS SELAMANYA!</strong> Inilah keuntungan investasi terbesar Bapak di WebNgebut. Website jualan Anda kami tanam langsung di infrastruktur server Cloudflare Global berkapasitas tinggi secara gratis. Bapak cukup bayar jasa pembuatan kodingnya sekali saja di awal, dan website Anda akan terus menyala cepat selamanya tanpa ada tagihan tahunan server lagi! Bapak hanya perlu memperpanjang nama alamat website Anda saja (.com/.id) setahun sekali yang biayanya sangat murah (mulai dari 100 ribuan per tahun).</p>
+            </details>
+
+            <details class="faq-card text-left">
+                <summary>Apakah tampilan atau desain website jualan lama saya akan berubah total?</summary>
+                <p style="color: #333333; line-height: 1.7;">Jawab: Kami akan <strong>mempertahankan bentuk logo, susunan penawaran, kalimat jualan, dan struktur utama</strong> dari website lama Anda. Tampilannya akan dibuat sama persis agar pelanggan Anda tidak bingung. Namun, di balik layarnya kami bongkar dan bangun ulang kodenya menggunakan HTML murni dari nol agar terbuka di bawah 1 detik di HP. Kami hanya merapikan bagian gambar yang terlalu berat atau kodingan rusak yang selama ini membuat performa iklan Anda lambat. Hasilnya: Web tetap terlihat mewah, tapi <strong>daya jualnya jauh lebih kencang!</strong></p>
+            </details>
+
+            <details class="faq-card text-left">
+                <summary>Karena kodingannya sangat ringan (HTML Murni), apakah tetap bisa dipasangi Pixel Facebook atau Google Analytics?</summary>
+                <p style="color: #333333; line-height: 1.7;">Jawab: Tentu saja sangat bisa! Kode pelacak iklan (Meta Pixel, Google Tag, TikTok Pixel) tetap berjalan 100% sempurna untuk merekam data pembeli yang masuk, tanpa memperlambat kecepatan buka halaman website Anda sedikit pun.</p>
+            </details>
+
+            <details class="faq-card text-left">
+                <summary>Apakah website HTML murni ini bisa mengamankan akun iklan saya dari blokir (banned)?</summary>
+                <p style="color: #333333; line-height: 1.7;">Jawab: Sangat membantu, Pak. Salah satu penyebab terbesar robot Meta atau Google memblokir akun iklan secara mendadak adalah karena website jualan lama Anda (yang pakai WordPress) diam-diam disusupi virus iklan judi online oleh hacker tanpa Anda sadari. Karena sistem WebNgebut tidak menggunakan database dan tidak memiliki halaman login admin, website Anda menutup total celah peretas, kebal dari serangan hacker, sehingga akun iklan Anda jauh lebih aman dari risiko blokir mendadak.</p>
+            </details>
+
+            <details class="faq-card text-left">
+                <summary>Kalau tidak ada halaman login admin, bagaimana kalau nanti saya mau ganti harga produk atau foto promo?</summary>
+                <p style="color: #333333; line-height: 1.7;">Jawab: Kami menyediakan layanan <strong>Terima Beres Tanpa Repot</strong>. Sesuai paket yang Bapak pilih, jika di kemudian hari ingin melakukan perubahan teks, harga dicoret, atau ganti foto produk, Bapak tidak perlu pusing membongkar kodingan sendiri. Cukup kirimkan materinya kepada kami lewat WhatsApp, dan tim kami yang akan langsung menggantinya secara gratis, aman, dan cepat.</p>
+            </details>
+
+        </div>
+    </div>
+</section>
+
+        <section class="section bg-dark text-center" id="final-cta" style="padding: 90px 0;">
+    <div class="container">
+        <h2 style="font-size: 2.8rem; margin-bottom: 25px; font-weight: 900; line-height: 1.3; color: #FFFFFF;">
+            Setiap Detik Anda Menunda, <br>
+            <span class="text-orange">Modal Iklan Menguap & Tagihan Hosting Jalan Terus!</span>
+        </h2>
+        
+        <p style="font-size: 1.2rem; color: #E0E0E0; max-width: 800px; margin: 0 auto 40px; line-height: 1.7;">
+            Demi menjaga kualitas koding manual tingkat tinggi yang terbuka instan di bawah 1 detik, kami sengaja membatasi pengerjaan <strong>maksimal hanya untuk 5 pemilik bisnis saja per minggunya.</strong> Amankan slot website premium Anda hari ini untuk menikmati fasilitas <strong>Gratis Hosting Selamanya</strong> sebelum kuota minggu ini habis didahului oleh kompetitor Anda!
+        </p>
+        
+        <a href="#formulir-order" class="btn btn-pulse" style="font-size: 1.3rem; padding: 20px 45px; border-radius: 50px; font-weight: 800; letter-spacing: 0.5px;">
+            🚀 KLAIM SLOT GRATIS HOSTING SELAMANYA NOW
+        </a>
+        
+        <p style="font-size: 0.95rem; color: #B0B0B0; margin-top: 25px; font-style: italic;">
+            *Layanan Audit Kecepatan Google & Konsultasi Awal 100% Gratis Tanpa Biaya Sepeser Pun.
+        </p>
+    </div>
+</section>
+
+<section id="formulir-order" class="section bg-light" style="padding: 80px 0;">
+    <div class="container">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto 40px;">
+            <div class="highlight">Langkah Terakhir</div>
+            <h2 class="text-orange-dark" style="font-size: 2.5rem; font-weight: 900;">Amankan Slot & Mulai Project Web Anda</h2>
+            <p style="font-size: 1.1rem; color: #333333; margin-top: 10px; line-height: 1.6;">
+                Isi data singkat Anda di bawah ini. Sistem kami akan langsung menghubungkan Anda ke jalur WhatsApp prioritas untuk mulai diskusi atau audit gratis.
+            </p>
+        </div>
+
+        <div class="form-wrapper" style="max-width: 800px; margin: 0 auto; background: #ffffff; padding: 40px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+            <form action="https://mahardi.com/mesin-sakti.php" method="POST">
+                
+                <div class="grid-2">
+                    <div class="form-group" style="margin-bottom: 25px;">
+                        <label style="color: var(--primary-blue); font-weight: 700; display: block; margin-bottom: 8px;">Nama Lengkap / Nama Bisnis Anda</label>
+                        <input type="text" name="nama_pengirim" class="form-control" placeholder="Contoh: Pak Supriyadi / Herbal Kirana" style="width: 100%; padding: 12px 15px; border-radius: 8px; border: 1px solid #CCCCCC;" required>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 25px;">
+                        <label style="color: var(--primary-blue); font-weight: 700; display: block; margin-bottom: 8px;">Nomor WhatsApp Aktif (Untuk Diskusi)</label>
+                        <input type="tel" name="wa_pengirim" class="form-control" placeholder="Contoh: 081234567xxx" style="width: 100%; padding: 12px 15px; border-radius: 8px; border: 1px solid #CCCCCC;" required>
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 25px;">
+                    <label for="pilih-paket" style="color: var(--primary-blue); font-weight: 700; display: block; margin-bottom: 8px;">Pilih Paket Investasi WebNgebut</label>
+                    <select name="jenis_website" id="pilih-paket" class="form-control" style="width: 100%; padding: 12px 15px; border-radius: 8px; border: 1px solid #CCCCCC; background-color: #fff;" required>
+                        <option value="">-- Silakan Pilih Paket Website Anda --</option>
+                        <option value="Paket Penyelamat (1.250.000)">PAKET PENYELAMAT - Rp 1.250.000 (1 Landing Page + GRATIS Hosting Selamanya 🎁)</option>
+                        <option value="Paket Scaling (1.950.000)">PAKET SCALING - Rp 1.950.000 (Terima Beres 3 Hal + GRATIS Hosting Selamanya + Gratis Domain 🎁)</option>
+                        <option value="Proyek Kustom / Request Khusus">Request Khusus / Kustom Website Skala Besar</option>
+                    </select>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 35px;">
+                    <label style="color: var(--primary-blue); font-weight: 700; display: block; margin-bottom: 8px;">Jenis Usaha / Link Website Lama Anda (Jika Ada)</label>
+                    <textarea name="pesan_klien" class="form-control" rows="3" placeholder="Contoh: Jasa Rental Mobil Jakarta / Skincare Madu. Masukkan link website lama Anda jika ingin dibantu audit skor Google secara gratis oleh tim kami." style="width: 100%; padding: 12px 15px; border-radius: 8px; border: 1px solid #CCCCCC; line-height: 1.6;" required></textarea>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-form btn-pulse" style="width: 100%; max-width: 550px; background-color: #25D366 !important; color: white !important; border-radius: 50px; font-weight: 900; font-size: 1.15rem; padding: 16px 0; border: none; cursor: pointer; box-shadow: 0 8px 20px rgba(37, 211, 102, 0.25);">
+                        AMANKAN SLOT & KONSULTASI VIA WA SEKARANG 🚀
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <footer style="text-align: center; padding: 60px 20px; background-color: #050d1a; color: #b0b0b0; font-family: 'Segoe UI', sans-serif;">
+        <div class="container">
+            <p style="margin-bottom: 15px; font-size: 1.1rem; font-weight: 700; color: #FFFFFF;">&copy; 2026 WebNgebut. Web Super Kencang, Gratis Hosting Selamanya! 🚀</p>
+            
+            <div style="margin-bottom: 25px; font-size: 0.95rem;">
+                <a href="privacy-policy.html" style="color: #b0b0b0; text-decoration: none; margin: 0 10px;">Privacy Policy</a> | 
+                <a href="terms-of-service.html" style="color: #b0b0b0; text-decoration: none; margin: 0 10px;">Terms of Service</a>
+            </div>
+            
+            <p style="font-size: 0.8rem; max-width: 650px; margin: 0 auto; color: #b0b0b0; line-height: 1.6; opacity: 0.85;">
+                Catatan Transparansi: Layanan kami berfokus penuh pada optimasi kecepatan ekstrem dan pembersihan baris kode website jualan. Hasil penjualan atau konversi omset iklan Anda nantinya akan tetap dipengaruhi oleh kualitas penawaran produk, foto/video kreatif iklan, serta pelayanan tim CS WhatsApp Anda.
+            </p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/6285137396984?text=Halo%20Tim%20WebNgebut!%20Saya%20mau%20konsultasi%20buat%20landing%20page%20yang%20bebas%20biaya%20hosting%20tahunan" onclick="return laporKeGoogle('https://wa.me/6285137396984?text=Halo%20Tim%20WebNgebut!%20Saya%20mau%20konsultasi%20buat%20landing%20page%20yang%20bebas%20biaya%20hosting%20tahunan')" class="floating-wa" target="_blank" aria-label="Chat WhatsApp WebNgebut" rel="noopener noreferrer" style="white-space: nowrap;">
+        <svg class="wa-icon" viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+        Audit Web & Gratis Hosting 🎁
+    </a>
+
+    <script>
+        document.querySelectorAll('.faq-card').forEach((targetDetail) => {
+            targetDetail.addEventListener('click', (e) => {
+                if (targetDetail.hasAttribute('open')) return; 
+                document.querySelectorAll('.faq-card[open]').forEach((openDetail) => {
+                    if (openDetail !== targetDetail) {
+                        openDetail.removeAttribute('open');
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script>
+        function laporKeGoogle(url) {
+            var tracker = window.gtag || window.parent.gtag;
+
+            if (typeof tracker === 'function') {
+                tracker('event', 'conversion', {
+                    'send_to': 'AW-18116725113/hG1PCO3C7KEcEPmS3b5D',
+                    'event_callback': function() {
+                        console.log('Laporan konversi sukses dikirim ke Google Ads Dashboard!');
+                    }
+                });
+            }
+            
+            window.open(url, '_blank');
+            return false;
+        }
+    </script>
+
+</body>
+</html>

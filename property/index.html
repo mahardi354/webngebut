@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hunian Eksklusif dengan Desain Modern Minimalis. Lingkungan Asri, Bebas Banjir, dan Akses Hanya 5 Menit ke Gerbang Tol.">
+  <title>Griya Asri Residence - Rumah Impian Keluarga</title>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--color-primary:#1a5f4a;--color-primary-light:#238c6e;--color-primary-dark:#134436;--color-secondary:#c9a962;--color-bg-light:#faf9f7;--color-bg-cream:#f5f1eb;--color-bg-sage:#e8efe9;--color-bg-warm:#f8f4ef;--color-text:#1f2937;--color-text-muted:#6b7280;--color-white:#ffffff;--color-border:#e5e7eb;--shadow-sm:0 1px 2px rgba(0,0,0,0.05);--shadow-md:0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06);--shadow-lg:0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);--shadow-glow:0 0 40px rgba(26,95,74,0.15);--radius:12px;--radius-lg:16px}
+    html{scroll-behavior:smooth}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:var(--color-text);line-height:1.6;background-color:var(--color-bg-light)}
+    img{max-width:100%;height:auto;display:block}
+    a{color:inherit;text-decoration:none}
+    .container{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+    .nav{position:sticky;top:0;background:var(--color-white);border-bottom:1px solid var(--color-border);z-index:1000;padding:0 20px}
+    .nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;height:70px}
+    .nav-logo{font-size:1.25rem;font-weight:700;color:var(--color-primary)}
+    .nav-links{display:none;gap:32px;list-style:none}
+    .nav-links a{font-size:0.9rem;font-weight:500;color:var(--color-text-muted);transition:color 0.2s}
+    .nav-links a:hover{color:var(--color-primary)}
+    .nav-cta{display:none;background:var(--color-primary);color:var(--color-white);padding:10px 20px;border-radius:8px;font-size:0.9rem;font-weight:600;transition:background 0.2s}
+    .nav-cta:hover{background:var(--color-primary-dark)}
+    .hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;padding:5px;z-index:1001}
+    .hamburger span{width:24px;height:2px;background:var(--color-text);transition:all 0.3s}
+    .hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+    .hamburger.active span:nth-child(2){opacity:0}
+    .hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+    .mobile-menu{display:none;position:fixed;top:70px;left:0;right:0;background:var(--color-white);padding:20px;border-bottom:1px solid var(--color-border);box-shadow:var(--shadow-lg);z-index:999}
+    .mobile-menu.active{display:block}
+    .mobile-menu a{display:block;padding:12px 0;font-weight:500;color:var(--color-text);border-bottom:1px solid var(--color-border)}
+    .mobile-menu a:last-child{border-bottom:none}
+    .hero{background:linear-gradient(135deg,var(--color-bg-light) 0%,var(--color-bg-cream) 100%);padding:60px 20px;min-height:90vh;display:flex;align-items:center}
+    .hero-container{max-width:1200px;margin:0 auto;display:grid;gap:40px;align-items:center}
+    .hero-content h1{font-size:2rem;font-weight:700;line-height:1.2;color:var(--color-text);margin-bottom:16px}
+    .hero-content h1 span{color:var(--color-primary)}
+    .hero-content p{font-size:1rem;color:var(--color-text-muted);margin-bottom:24px;line-height:1.7}
+    .hero-cta{display:inline-flex;align-items:center;gap:10px;background:var(--color-primary);color:var(--color-white);padding:14px 28px;border-radius:10px;font-size:1rem;font-weight:600;transition:all 0.3s;box-shadow:var(--shadow-md)}
+    .hero-cta:hover{background:var(--color-primary-dark);transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+    .hero-image{position:relative}
+    .hero-image img{border-radius:var(--radius-lg);box-shadow:var(--shadow-glow);width:100%;aspect-ratio:3/2;object-fit:cover;background:#e8efe9}
+    .authority{background:var(--color-primary);padding:24px 20px}
+    .authority-content{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:16px 32px;text-align:center}
+    .authority-item{display:flex;align-items:center;gap:8px;color:var(--color-white);font-size:0.85rem;font-weight:500}
+    .authority-item svg{width:18px;height:18px;fill:var(--color-secondary)}
+    .section{padding:80px 20px}
+    .section-title{font-size:1.75rem;font-weight:700;text-align:center;margin-bottom:16px;color:var(--color-text)}
+    .section-subtitle{text-align:center;color:var(--color-text-muted);max-width:600px;margin:0 auto 48px}
+    .highlights{background:var(--color-bg-sage);content-visibility:auto;contain-intrinsic-size:auto 800px}
+    .highlights-grid{display:grid;gap:24px}
+    .highlight-card{background:var(--color-white);border:1px solid var(--color-border);border-radius:var(--radius);padding:28px;text-align:center;box-shadow:var(--shadow-sm);transition:all 0.3s}
+    .highlight-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--color-primary)}
+    .highlight-icon{width:56px;height:56px;background:var(--color-bg-sage);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.5rem}
+    .highlight-card h3{font-size:1.1rem;font-weight:600;margin-bottom:8px;color:var(--color-text)}
+    .highlight-card p{font-size:0.9rem;color:var(--color-text-muted);line-height:1.6}
+    .units{background:var(--color-bg-warm);content-visibility:auto;contain-intrinsic-size:auto 900px}
+    .units-grid{display:grid;gap:24px}
+    .unit-card{background:var(--color-white);border:1px solid var(--color-border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);transition:all 0.3s}
+    .unit-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--color-primary)}
+    .unit-image{height:200px;overflow:hidden}
+    .unit-image img{width:100%;height:100%;object-fit:cover;transition:transform 0.3s;background:#e8efe9}
+    .unit-card:hover .unit-image img{transform:scale(1.05)}
+    .unit-content{padding:24px}
+    .unit-content h3{font-size:1.25rem;font-weight:700;margin-bottom:8px;color:var(--color-primary)}
+    .unit-content p{font-size:0.9rem;color:var(--color-text-muted);margin-bottom:12px}
+    .unit-price{font-size:1.1rem;font-weight:700;color:var(--color-secondary)}
+    .unit-specs{margin-top:16px;padding-top:16px;border-top:1px solid var(--color-border);font-size:0.85rem;color:var(--color-text-muted)}
+    .pain-points{background:var(--color-bg-light);content-visibility:auto;contain-intrinsic-size:auto 600px}
+    .pain-grid{display:grid;gap:20px}
+    .pain-card{background:var(--color-white);border:1px solid var(--color-border);border-radius:var(--radius);padding:24px;display:flex;gap:16px;align-items:flex-start;box-shadow:var(--shadow-sm);transition:all 0.3s}
+    .pain-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--color-primary)}
+    .pain-icon{width:40px;height:40px;background:#fef2f2;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#ef4444;font-size:1.25rem}
+    .pain-card h3{font-size:1rem;font-weight:600;margin-bottom:4px;color:var(--color-text)}
+    .pain-card p{font-size:0.85rem;color:var(--color-text-muted)}
+    .why-us{background:var(--color-bg-cream);content-visibility:auto;contain-intrinsic-size:auto 700px}
+    .why-us-container{display:grid;gap:40px;align-items:center}
+    .why-us-image{position:relative}
+    .why-us-image img{border-radius:var(--radius-lg);box-shadow:var(--shadow-glow);aspect-ratio:5/4;object-fit:cover;background:#e8efe9}
+    .why-us-content h2{font-size:1.75rem;font-weight:700;margin-bottom:24px;color:var(--color-text)}
+    .why-us-list{display:flex;flex-direction:column;gap:16px}
+    .why-us-item{background:var(--color-white);border:1px solid var(--color-border);border-radius:var(--radius);padding:20px;display:flex;gap:16px;align-items:flex-start;box-shadow:var(--shadow-sm);transition:all 0.3s}
+    .why-us-item:hover{border-color:var(--color-primary);box-shadow:var(--shadow-md)}
+    .why-us-number{width:36px;height:36px;background:var(--color-primary);color:var(--color-white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9rem;flex-shrink:0}
+    .why-us-item h4{font-size:1rem;font-weight:600;margin-bottom:4px;color:var(--color-text)}
+    .why-us-item p{font-size:0.85rem;color:var(--color-text-muted)}
+    .promo-badge{margin-top:24px;background:linear-gradient(135deg,var(--color-secondary) 0%,#d4b76a 100%);color:var(--color-primary-dark);padding:16px 20px;border-radius:var(--radius);font-weight:600;text-align:center}
+    .faq{background:var(--color-bg-sage);content-visibility:auto;contain-intrinsic-size:auto 800px}
+    .faq-list{max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+    .faq-item{background:var(--color-white);border:1px solid var(--color-border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);transition:all 0.3s}
+    .faq-item:hover{border-color:var(--color-primary)}
+    .faq-question{width:100%;padding:20px 24px;background:none;border:none;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:inherit;font-size:1rem;font-weight:600;color:var(--color-text)}
+    .faq-question svg{width:20px;height:20px;transition:transform 0.3s;flex-shrink:0}
+    .faq-item.active .faq-question svg{transform:rotate(180deg)}
+    .faq-answer{max-height:0;overflow:hidden;transition:max-height 0.3s ease-out}
+    .faq-answer-content{padding:0 24px 20px;color:var(--color-text-muted);font-size:0.95rem;line-height:1.7}
+    .final-cta{background:linear-gradient(135deg,var(--color-primary) 0%,var(--color-primary-dark) 100%);padding:80px 20px;text-align:center;content-visibility:auto;contain-intrinsic-size:auto 400px}
+    .final-cta h2{font-size:1.75rem;font-weight:700;color:var(--color-white);margin-bottom:16px}
+    .final-cta p{color:rgba(255,255,255,0.85);margin-bottom:32px;max-width:500px;margin-left:auto;margin-right:auto}
+    .cta-button{display:inline-flex;align-items:center;gap:10px;background:var(--color-white);color:var(--color-primary);padding:16px 32px;border-radius:10px;font-size:1rem;font-weight:700;transition:all 0.3s;box-shadow:var(--shadow-lg)}
+    .cta-button:hover{transform:translateY(-2px);box-shadow:0 20px 25px -5px rgba(0,0,0,0.2)}
+    .cta-button svg{width:24px;height:24px}
+    .footer{background:var(--color-text);color:var(--color-white);padding:48px 20px 24px;content-visibility:auto;contain-intrinsic-size:auto 300px}
+    .footer-content{max-width:1200px;margin:0 auto;display:grid;gap:32px}
+    .footer-brand h3{font-size:1.25rem;font-weight:700;margin-bottom:12px;color:var(--color-white)}
+    .footer-brand p{font-size:0.9rem;color:rgba(255,255,255,0.7);line-height:1.7}
+    .footer-links h4{font-size:1rem;font-weight:600;margin-bottom:16px;color:var(--color-white)}
+    .footer-links ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+    .footer-links a{font-size:0.9rem;color:rgba(255,255,255,0.7);transition:color 0.2s}
+    .footer-links a:hover{color:var(--color-white)}
+    .footer-bottom{max-width:1200px;margin:32px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,0.1);text-align:center;font-size:0.85rem;color:rgba(255,255,255,0.6)}
+    .whatsapp-float{position:fixed;bottom:24px;right:24px;width:60px;height:60px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(37,211,102,0.4);z-index:1000;transition:all 0.3s}
+    .whatsapp-float:hover{transform:scale(1.1);box-shadow:0 6px 20px rgba(37,211,102,0.5)}
+    .whatsapp-float svg{width:32px;height:32px;fill:white}
+    @media(min-width:640px){.highlights-grid,.pain-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(min-width:768px){.nav-links{display:flex}.nav-cta{display:block}.hamburger{display:none}.hero-container{grid-template-columns:1fr 1fr}.hero-content h1{font-size:2.5rem}.units-grid{grid-template-columns:repeat(3,1fr)}.why-us-container{grid-template-columns:1fr 1.5fr}.section-title{font-size:2rem}.footer-content{grid-template-columns:2fr 1fr 1fr}}
+    @media(min-width:1024px){.hero{padding:100px 20px}.hero-content h1{font-size:3rem}.hero-content p{font-size:1.1rem}.highlights-grid,.pain-grid{grid-template-columns:repeat(4,1fr)}.section{padding:100px 20px}.final-cta h2{font-size:2.25rem}}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">Griya Asri</a>
+      <ul class="nav-links">
+        <li><a href="#fasilitas">Fasilitas</a></li>
+        <li><a href="#unit">Tipe Unit</a></li>
+        <li><a href="#keuntungan">Keuntungan</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a href="https://wa.me/6281234567890" class="nav-cta">Hubungi Kami</a>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#fasilitas">Fasilitas</a>
+      <a href="#unit">Tipe Unit</a>
+      <a href="#keuntungan">Keuntungan</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://wa.me/6281234567890">Hubungi Kami</a>
+    </div>
+  </nav>
+
+  <section class="hero" id="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1>Wujudkan <span>Rumah Impian</span> Keluarga di Lokasi Paling Strategis!</h1>
+        <p>Hunian Eksklusif dengan Desain Modern Minimalis. Lingkungan Asri, Bebas Banjir, dan Akses Hanya 5 Menit ke Gerbang Tol.</p>
+        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20untuk%20konsultasi%20KPR%20dan%20jadwal%20survey" class="hero-cta">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Konsultasi KPR &amp; Jadwal Survey
+        </a>
+      </div>
+      <div class="hero-image">
+        <img src="images/hero-house.jpg" alt="Rumah modern minimalis dengan desain elegan di Griya Asri Residence" width="600" height="400" fetchpriority="high" decoding="async">
+      </div>
+    </div>
+  </section>
+
+  <section class="authority">
+    <div class="authority-content">
+      <div class="authority-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        Sertifikat SHM Ready
+      </div>
+      <div class="authority-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+        IMB Lengkap
+      </div>
+      <div class="authority-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 10v7h3v-7H4zm6 0v7h3v-7h-3zM2 22h19v-3H2v3zm14-12v7h3v-7h-3zm-4.5-9L2 6v2h19V6l-9.5-5z"/></svg>
+        10+ Bank Nasional
+      </div>
+      <div class="authority-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        Developer Terpercaya Sejak 2010
+      </div>
+    </div>
+  </section>
+
+  <section class="section highlights" id="fasilitas">
+    <div class="container">
+      <h2 class="section-title">Fasilitas Premium untuk Kualitas Hidup Anda</h2>
+      <p class="section-subtitle">Nikmati berbagai fasilitas unggulan yang dirancang untuk kenyamanan dan keamanan keluarga Anda</p>
+      <div class="highlights-grid">
+        <div class="highlight-card">
+          <div class="highlight-icon" aria-hidden="true">&#128737;</div>
+          <h3>One Gate System</h3>
+          <p>Keamanan 24 Jam dengan CCTV di setiap sudut perumahan untuk ketenangan Anda</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-icon" aria-hidden="true">&#127966;</div>
+          <h3>Green Area</h3>
+          <p>Taman bermain anak dan area olahraga terbuka untuk gaya hidup sehat keluarga</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-icon" aria-hidden="true">&#128246;</div>
+          <h3>Underground Utility</h3>
+          <p>Jaringan kabel bawah tanah untuk tampilan rapi tanpa kabel melintang</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-icon" aria-hidden="true">&#128332;</div>
+          <h3>Fasilitas Umum</h3>
+          <p>Dekat Masjid, Sekolah berkualitas, dan Pusat Perbelanjaan modern</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section units" id="unit">
+    <div class="container">
+      <h2 class="section-title">Detail Unit &amp; Spesifikasi Bangunan</h2>
+      <p class="section-subtitle">Pilih tipe rumah yang sesuai dengan kebutuhan keluarga Anda</p>
+      <div class="units-grid">
+        <div class="unit-card">
+          <div class="unit-image">
+            <img src="images/unit-36.jpg" alt="Rumah Tipe 36/72 untuk pasangan muda" width="400" height="300" loading="lazy" decoding="async">
+          </div>
+          <div class="unit-content">
+            <h3>Tipe 36/72</h3>
+            <p>Cocok untuk pasangan muda yang baru memulai kehidupan berumah tangga</p>
+            <div class="unit-price">Mulai Rp 350 Juta</div>
+            <div class="unit-specs">Dinding Bata Merah &bull; Lantai Granit 60x60 &bull; Atap Baja Ringan &bull; Listrik 2200W</div>
+          </div>
+        </div>
+        <div class="unit-card">
+          <div class="unit-image">
+            <img src="images/unit-45.jpg" alt="Rumah Tipe 45/90 untuk keluarga kecil" width="400" height="300" loading="lazy" decoding="async">
+          </div>
+          <div class="unit-content">
+            <h3>Tipe 45/90</h3>
+            <p>Ruang lebih luas untuk keluarga kecil dengan 2-3 anggota keluarga</p>
+            <div class="unit-price">Mulai Rp 480 Juta</div>
+            <div class="unit-specs">Dinding Bata Merah &bull; Lantai Granit 60x60 &bull; Atap Baja Ringan &bull; Listrik 2200W</div>
+          </div>
+        </div>
+        <div class="unit-card">
+          <div class="unit-image">
+            <img src="images/unit-60.jpg" alt="Rumah Tipe 60/120 mewah dengan halaman luas" width="400" height="300" loading="lazy" decoding="async">
+          </div>
+          <div class="unit-content">
+            <h3>Tipe 60/120</h3>
+            <p>Hunian mewah dengan halaman luas untuk keluarga besar</p>
+            <div class="unit-price">Mulai Rp 650 Juta</div>
+            <div class="unit-specs">Dinding Bata Merah &bull; Lantai Granit 60x60 &bull; Atap Baja Ringan &bull; Listrik 2200W</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pain-points">
+    <div class="container">
+      <h2 class="section-title">Kenapa Harus Ambil Keputusan Sekarang?</h2>
+      <p class="section-subtitle">Jangan sampai menyesal karena menunda kesempatan emas ini</p>
+      <div class="pain-grid">
+        <div class="pain-card">
+          <div class="pain-icon" aria-hidden="true">&#10060;</div>
+          <div>
+            <h3>Harga Terus Naik</h3>
+            <p>Harga properti di wilayah ini naik 10-15% setiap tahunnya. Semakin ditunda, semakin mahal!</p>
+          </div>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon" aria-hidden="true">&#10060;</div>
+          <div>
+            <h3>Unit Terbatas</h3>
+            <p>Slot unit dengan lokasi hook atau depan taman sangat terbatas dan cepat habis</p>
+          </div>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon" aria-hidden="true">&#10060;</div>
+          <div>
+            <h3>Promo Terbatas</h3>
+            <p>Promo DP 0% dan bunga KPR rendah tidak berlaku selamanya. Manfaatkan sekarang!</p>
+          </div>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon" aria-hidden="true">&#10060;</div>
+          <div>
+            <h3>Kemandirian Keluarga</h3>
+            <p>Menunda beli rumah berarti menjauhkan keluarga dari kemandirian dan kestabilan</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section why-us" id="keuntungan">
+    <div class="container">
+      <div class="why-us-container">
+        <div class="why-us-image">
+          <img src="images/why-us.jpg" alt="Keluarga bahagia di rumah baru Griya Asri" width="500" height="400" loading="lazy" decoding="async">
+        </div>
+        <div class="why-us-content">
+          <h2>Kemudahan Kepemilikan Unit</h2>
+          <div class="why-us-list">
+            <div class="why-us-item">
+              <div class="why-us-number">1</div>
+              <div>
+                <h4>Survey Lokasi</h4>
+                <p>Kami antar gratis untuk melihat unit contoh dan lokasi perumahan</p>
+              </div>
+            </div>
+            <div class="why-us-item">
+              <div class="why-us-number">2</div>
+              <div>
+                <h4>Booking Fee</h4>
+                <p>Amankan unit pilihan Anda hanya dengan Rp 5 Juta saja</p>
+              </div>
+            </div>
+            <div class="why-us-item">
+              <div class="why-us-number">3</div>
+              <div>
+                <h4>Proses KPR</h4>
+                <p>Kami bantu pengurusan berkas sampai akad - Gak pake ribet!</p>
+              </div>
+            </div>
+          </div>
+          <div class="promo-badge">
+            &#127873; Free Biaya AJB, BBN, dan BPHTB khusus booking bulan ini!
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section faq" id="faq">
+    <div class="container">
+      <h2 class="section-title">Pertanyaan yang Sering Diajukan</h2>
+      <p class="section-subtitle">Temukan jawaban untuk pertanyaan umum seputar pembelian rumah</p>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            Apakah bisa cicilan tanpa bank (Syariah)?
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Ya, ada opsi cicilan langsung ke Developer dengan skema flat tanpa bunga. Tenor bisa disesuaikan hingga 10 tahun dengan cicilan tetap dari awal sampai lunas.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            Gimana kalau pengajuan KPR ditolak?
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Kami akan bantu optimasi berkas Anda atau mencoba pengajuan ke bank lain. Jika tetap tidak berhasil, uang Booking Fee kembali 100% (S&amp;K berlaku).
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            Apakah sudah termasuk biaya-biaya tambahan?
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Untuk pembelian bulan ini, kami memberikan GRATIS biaya AJB, BBN, dan BPHTB. Anda hanya perlu menyiapkan Booking Fee dan DP sesuai skema yang dipilih.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            Kapan unit sudah bisa ditempati?
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Untuk unit ready stock bisa langsung ditempati setelah akad kredit. Untuk unit indent, estimasi pembangunan 6-8 bulan dari tanggal booking.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            Apakah bisa renovasi setelah serah terima?
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Tentu bisa! Setelah serah terima kunci, rumah sudah menjadi milik Anda sepenuhnya. Renovasi diperbolehkan selama tidak mengubah struktur dan mengikuti aturan lingkungan perumahan.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container">
+      <h2>Jangan Cuma Dilihat, Rasakan Langsung Suasana Huniannya!</h2>
+      <p>Hubungi Marketing Gallery kami sekarang untuk mendapatkan e-brosur dan daftar harga terbaru.</p>
+      <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20mendapatkan%20e-brosur%20dan%20daftar%20harga%20terbaru" class="cta-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Hubungi Marketing via WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>Griya Asri Residence</h3>
+        <p>Hunian eksklusif dengan desain modern minimalis di lokasi strategis. Wujudkan rumah impian keluarga Anda bersama kami.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="#fasilitas">Fasilitas</a></li>
+          <li><a href="#unit">Tipe Unit</a></li>
+          <li><a href="#keuntungan">Keuntungan</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Kontak</h4>
+        <ul>
+          <li><a href="https://wa.me/6281234567890">WhatsApp: 0812-3456-7890</a></li>
+          <li><a href="mailto:info@griyaasri.com">Email: info@griyaasri.com</a></li>
+          <li><a href="#">Jl. Raya Utama No. 123</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2024 Griya Asri Residence. All rights reserved.
+    </div>
+  </footer>
+
+  <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20rumah%20di%20Griya%20Asri%20Residence" class="whatsapp-float" aria-label="Chat via WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script>
+    (function(){
+      var h=document.getElementById('hamburger'),m=document.getElementById('mobileMenu'),q=document.querySelectorAll('.faq-question'),l=document.querySelectorAll('a[href^="#"]'),ml=m.querySelectorAll('a');
+      function tm(){h.classList.toggle('active');m.classList.toggle('active')}
+      function cm(){h.classList.remove('active');m.classList.remove('active')}
+      h.addEventListener('click',tm);
+      for(var i=0;i<ml.length;i++)ml[i].addEventListener('click',cm);
+      for(var j=0;j<q.length;j++){q[j].addEventListener('click',function(){var p=this.parentElement,a=p.querySelector('.faq-answer'),ac=p.classList.contains('active');document.querySelectorAll('.faq-item').forEach(function(x){x.classList.remove('active');x.querySelector('.faq-answer').style.maxHeight=null});if(!ac){p.classList.add('active');a.style.maxHeight=a.scrollHeight+'px';this.setAttribute('aria-expanded','true')}else{this.setAttribute('aria-expanded','false')}})}
+      for(var k=0;k<l.length;k++){l[k].addEventListener('click',function(e){e.preventDefault();var t=document.querySelector(this.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})}
+    })();
+  </script>
+</body>
+</html>
